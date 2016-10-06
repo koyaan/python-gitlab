@@ -553,11 +553,11 @@ class UserKeyManager(BaseManager):
 class User(GitlabObject):
     _url = '/users'
     shortPrintAttr = 'username'
-    requiredCreateAttrs = ['email', 'username', 'name', 'password']
+    requiredCreateAttrs = ['email', 'username', 'name']
     optionalCreateAttrs = ['skype', 'linkedin', 'twitter', 'projects_limit',
                            'extern_uid', 'provider', 'bio', 'admin',
                            'can_create_group', 'website_url', 'confirm',
-                           'external']
+                           'external', 'force_random_password']
     requiredUpdateAttrs = ['email', 'username', 'name']
     optionalUpdateAttrs = ['password', 'skype', 'linkedin', 'twitter',
                            'projects_limit', 'extern_uid', 'provider', 'bio',
